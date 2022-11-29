@@ -1,0 +1,7 @@
+{% for type, messages in app.session.flashbag.all() %}
+    {% for message in messages %}
+        <div class="col-sm-6 mt-2 mx-auto alert alert-{{ type }} text-center {% if class is defined %}{{class}}{% endif %}">
+            {{ message|trans() }}
+        </div>
+    {% endfor %}
+{% endfor %}

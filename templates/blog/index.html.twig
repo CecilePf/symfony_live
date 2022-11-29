@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController !{% endblock %}
+
+{% block body %}
+    {% include 'flash.html.twig' %}
+    <div class="alert alert-info">
+        {{ component('count_blogpost') }}
+    </div>
+    <div class="row">
+        <div class="col-10">
+            {{ component('blogpost_search') }}
+        </div>
+        <div class="col-2 text-end">
+            <a href="{{ path('app_generate') }}" class="btn btn-primary">+</a>
+        </div>
+    </div>
+{% endblock %}

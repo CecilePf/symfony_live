@@ -1,0 +1,14 @@
+<div {{ attributes }}>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="query" class="col-form-label">Recherche</label>
+        </div>
+        <div class="col-8">
+            <input type="search" data-model="query" value="{{ query }}" class="form-control" id="query">
+        </div>
+    </div>
+
+    {% for blogpost in this.blogposts %}
+        {{ component('blogpost', {'id': blogpost.id}) }}
+    {% endfor %}
+</div>

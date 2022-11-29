@@ -1,0 +1,15 @@
+<a href="{{ path('app_edit', { id: this.blogpost.id }) }}">
+    <div class="card m-4">
+        <div class="card-body">
+            <h5 class="card-title">{{ this.blogpost.title }}</h5>
+            <p class="card-text">{{ this.blogpost.content }}</p>
+        </div>
+    </div>
+</a>
+
+<style>
+a {
+    text-decoration: none;
+    color: initial;
+}
+</style>
